@@ -13,9 +13,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # ใช้ actions/checkout@v4 ตัวนี้เพื่อดึงโค้ดลงมาทำงานจริง
+      # เปลี่ยนมาใช้ตัวมาตรฐานเพื่อให้ระบบดึงโค้ดได้สำเร็จ 100%
       - name: Checkout Code
-        uses: actions/Pannaporn-043@v4
+        uses: actions/checkout@v4
 
       # ทำการ Deploy ไปยัง GitHub Pages
       - name: Deploy to GitHub Pages
