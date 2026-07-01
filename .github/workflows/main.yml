@@ -1,0 +1,26 @@
+name: Deploy Static Web to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+
+# ตั้งค่า Permission ตามเงื่อนไขโจทย์
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # ใช้ Action ตามที่โจทย์กำหนด (อย่าลืมเปลี่ยนข้อความด้านล่างเป็น ชื่อภาษาอังกฤษ-รหัสของคุณ เช่น Somnuek-001 นะครับ)
+      - name: Checkout Code
+        uses: actions/เปลี่ยนเป็นชื่อของคุณ-รหัส3ตัวหลัง@v4
+
+      # ทำการ Deploy ไปยัง GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
