@@ -4,7 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-# ตั้งค่า Permission ตามเงื่อนไขโจทย์
 permissions:
   contents: write
   pages: write
@@ -14,9 +13,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # ใช้ Action ตามที่โจทย์กำหนด (อย่าลืมเปลี่ยนข้อความด้านล่างเป็น ชื่อภาษาอังกฤษ-รหัสของคุณ เช่น Somnuek-001 นะครับ)
+      # ใช้ actions/checkout@v4 ตัวนี้เพื่อดึงโค้ดลงมาทำงานจริง
       - name: Checkout Code
-        uses: actions/เปลี่ยนเป็นชื่อของคุณ-รหัส3ตัวหลัง@v4
+        uses: actions/Pannaporn-043@v4
 
       # ทำการ Deploy ไปยัง GitHub Pages
       - name: Deploy to GitHub Pages
